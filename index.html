@@ -1,1 +1,363 @@
-@/workspace/mikeinc-site-prep/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mike INC | Business. Capital. Infrastructure. Perspective.</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#C9A84C;--gold-2:#E8A020;--gold-dim:rgba(201,168,76,0.1);--gold-border:rgba(201,168,76,0.18);
+  --bg:#070709;--bg-2:#0D0D11;--bg-3:#121216;
+  --text:#F2EFE8;--text-dim:rgba(242,239,232,0.5);--text-faint:rgba(242,239,232,0.2);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:20px 56px;display:flex;justify-content:space-between;align-items:center;background:rgba(7,7,9,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.06);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.12em;color:var(--text);}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color 0.3s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-border);padding:8px 20px;text-decoration:none;transition:all 0.3s;background:var(--gold-dim);}
+.nav-sub:hover{background:rgba(201,168,76,0.18);}
+
+/* HERO — MAGAZINE EDITORIAL */
+.hero{min-height:100vh;padding-top:74px;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 80% 20%,rgba(201,168,76,0.06) 0%,transparent 60%);}
+.hero-content{flex:1;display:grid;grid-template-columns:1fr;align-items:center;padding:60px 56px;position:relative;z-index:2;}
+.hero-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:fadeUp 0.7s ease 0.1s forwards;}
+.hero-mega{font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,14vw,200px);line-height:0.88;letter-spacing:0.04em;margin-bottom:0;opacity:0;animation:fadeUp 0.7s ease 0.2s forwards;}
+.hero-mega-gold{font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,14vw,200px);line-height:0.88;letter-spacing:0.04em;color:var(--gold);margin-bottom:36px;opacity:0;animation:fadeUp 0.7s ease 0.3s forwards;}
+.hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;opacity:0;animation:fadeUp 0.7s ease 0.45s forwards;}
+.hero-desc{font-family:'Lora',serif;font-size:18px;font-style:italic;line-height:1.6;color:var(--text-dim);max-width:440px;}
+.hero-pillars{display:flex;flex-direction:column;gap:2px;}
+.hero-pillar{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dim);padding:12px 16px;border-left:2px solid var(--gold-border);transition:color 0.3s,border-color 0.3s;cursor:default;}
+.hero-pillar:hover{color:var(--text);border-color:var(--gold);}
+
+/* DIVIDER TAPE */
+.tape{background:var(--gold);padding:12px 0;overflow:hidden;white-space:nowrap;}
+.tape-track{display:inline-flex;gap:48px;animation:ticker 20s linear infinite;}
+.tape-item{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:0.1em;color:var(--bg);display:flex;align-items:center;gap:20px;}
+.tape-sep{font-size:8px;opacity:0.4;}
+
+/* CONTENT PILLARS */
+.pillars-section{padding:100px 56px;background:var(--bg-2);}
+.pillar-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.pillar-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,72px);letter-spacing:0.04em;margin-bottom:16px;line-height:1;}
+.pillar-body{font-size:15px;line-height:1.8;color:var(--text-dim);max-width:540px;margin-bottom:60px;}
+.content-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
+.content-card{background:var(--bg-3);padding:36px 24px;border-top:2px solid var(--gold-border);transition:background 0.3s,border-color 0.3s;}
+.content-card:hover{background:#16161A;border-color:var(--gold);}
+.content-card-icon{font-size:28px;margin-bottom:20px;display:block;}
+.content-card-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.06em;margin-bottom:10px;color:var(--text);}
+.content-card-body{font-size:13px;line-height:1.6;color:var(--text-dim);}
+
+/* GOBEYOND PODCAST */
+.fridays{padding:100px 56px;border-top:1px solid rgba(201,168,76,0.08);}
+.fridays-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.fridays-visual{background:var(--bg-3);border:1px solid var(--gold-border);padding:56px;text-align:center;position:relative;overflow:hidden;}
+.fridays-visual::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-2),var(--gold));}
+.fridays-day{font-family:'Bebas Neue',sans-serif;font-size:80px;color:var(--gold);line-height:1;margin-bottom:4px;}
+.fridays-name{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:0.08em;color:var(--text);margin-bottom:20px;}
+.fridays-desc-visual{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-faint);}
+.fridays-right .pillar-label{margin-bottom:16px;}
+.fridays-right h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);letter-spacing:0.04em;margin-bottom:20px;line-height:1.05;}
+.fridays-right p{font-size:15px;line-height:1.8;color:var(--text-dim);margin-bottom:32px;}
+.topic-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
+.topic-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);background:var(--gold-dim);border:1px solid var(--gold-border);padding:8px 16px;}
+.yt-btn{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--bg);background:var(--gold);padding:15px 32px;text-decoration:none;display:inline-block;transition:background 0.3s;}
+.yt-btn:hover{background:#D4B255;}
+
+/* BRANDS */
+.brands{padding:80px 56px;background:var(--bg-2);border-top:1px solid rgba(201,168,76,0.06);}
+.brands-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;text-align:center;}
+.brands-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,60px);letter-spacing:0.04em;margin-bottom:48px;text-align:center;line-height:1;}
+.brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.brand-card{background:var(--bg-3);padding:32px 28px;text-align:center;transition:background 0.3s;text-decoration:none;display:block;}
+.brand-card:hover{background:#141418;}
+.brand-card-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.08em;color:var(--text);margin-bottom:8px;}
+.brand-card-desc{font-size:13px;line-height:1.5;color:var(--text-dim);margin-bottom:14px;}
+.brand-card-link{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
+
+/* SUBSCRIBE */
+.subscribe{padding:100px 56px;text-align:center;border-top:1px solid rgba(201,168,76,0.08);position:relative;overflow:hidden;}
+.subscribe::before{content:'INC';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:300px;color:rgba(201,168,76,0.025);pointer-events:none;letter-spacing:0.1em;line-height:1;}
+.sub-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;position:relative;z-index:1;}
+.sub-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,7vw,96px);letter-spacing:0.04em;margin-bottom:16px;line-height:1;position:relative;z-index:1;}
+.sub-desc{font-family:'Lora',serif;font-size:18px;font-style:italic;line-height:1.6;color:var(--text-dim);max-width:460px;margin:0 auto 40px;position:relative;z-index:1;}
+.sub-form{display:flex;gap:0;max-width:440px;margin:0 auto;position:relative;z-index:1;}
+.sub-input{flex:1;background:var(--bg-3);border:1px solid var(--gold-border);border-right:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;padding:16px 18px;outline:none;transition:border-color 0.3s;}
+.sub-input:focus{border-color:var(--gold);}
+.sub-input::placeholder{color:var(--text-faint);}
+.sub-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--bg);background:var(--gold);border:none;padding:16px 28px;cursor:pointer;white-space:nowrap;transition:background 0.3s;}
+.sub-btn:hover{background:#D4B255;}
+.sub-note{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-faint);margin-top:14px;position:relative;z-index:1;}
+
+/* FOOTER */
+footer{padding:48px 56px;border-top:1px solid rgba(201,168,76,0.08);display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.12em;color:var(--text);}
+.footer-logo span{color:var(--gold);}
+.footer-note{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-faint);}
+.footer-advisory{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-faint);}
+.footer-advisory a{color:var(--gold);text-decoration:none;}
+.footer-contact{display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
+.footer-contact a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;}
+.footer-contact a:hover{opacity:0.8;}
+
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.75s ease,transform 0.75s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:900px){
+  nav{padding:18px 24px;}
+  .fridays-visual img{object-position:20% 12% !important;height:320px !important;}
+  .nav-links{display:none;}
+  .hero-content,.pillars-section,.fridays,.brands,.subscribe,footer{padding-left:24px;padding-right:24px;}
+  .hero-bottom,.fridays-inner{grid-template-columns:1fr;gap:40px;}
+  .content-cards,.brands-grid{grid-template-columns:1fr;}
+  .hero-mega,.hero-mega-gold{font-size:clamp(60px,18vw,130px);}
+  footer{flex-direction:column;gap:16px;text-align:center;}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Mike INC",
+  "url": "https://mikeinc.com",
+  "description": "Media and thought leadership platform by Mike Ogbebor. Covering capital, infrastructure, cross-border investment, faith, and leadership.",
+  "publisher": {
+    "@type": "Person",
+    "name": "Mike Ogbebor",
+    "url": "https://mikeogbebor.com",
+    "jobTitle": "Founder & Managing Director, GoBeyond Advisory"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "name": "GoBeyond Podcast",
+  "description": "Weekly episodes by Mike Ogbebor on faith, motivation, finance, infrastructure, and real talk leadership.",
+  "author": {
+    "@type": "Person",
+    "name": "Mike Ogbebor",
+    "url": "https://mikeogbebor.com"
+  },
+  "inLanguage": "en",
+  "genre": ["Business", "Finance", "Faith", "Leadership", "Infrastructure"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mike Ogbebor",
+  "url": "https://mikeogbebor.com",
+  "jobTitle": "Founder & Managing Director",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "GoBeyond Advisory",
+    "url": "https://gobeyondadvisory.com"
+  },
+  "description": "Houston-based entrepreneur, author, and strategic advisor. Founder of GoBeyond Advisory and ECO Infrastructure.",
+  "sameAs": [
+    "https://gobeyondadvisory.com",
+    "https://eco-rails.com",
+    "https://gobeyondseries.com",
+    "https://globalkidneyfoundation.com",
+    "https://mikeinc.com"
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">MIKE<span>INC</span></div>
+  <ul class="nav-links">
+    <li><a href="#content">Content</a></li>
+    <li><a href="#podcast">GoBeyond Podcast</a></li>
+    <li><a href="#brands">Brands</a></li>
+    <li><a href="#subscribe">Subscribe</a></li>
+  </ul>
+  <a href="https://gobeyondadvisory.com" class="nav-sub">Advisory Work →</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-kicker">Media · Content · Thought Leadership</div>
+    <div class="hero-mega">MIKE</div>
+    <div class="hero-mega-gold">INC.</div>
+    <div class="hero-bottom">
+      <div class="hero-desc">"Business. Capital. Infrastructure. Perspective. Ideas that move people and systems forward."</div>
+      <div class="hero-pillars">
+        <div class="hero-pillar">Capital & Infrastructure</div>
+        <div class="hero-pillar">Cross-Border Investment</div>
+        <div class="hero-pillar">Leadership & Discipline</div>
+        <div class="hero-pillar">Faith & Purpose</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tape">
+  <div class="tape-track">
+    <span class="tape-item">Capital<span class="tape-sep">✦</span></span>
+    <span class="tape-item">Infrastructure<span class="tape-sep">✦</span></span>
+    <span class="tape-item">Faith<span class="tape-sep">✦</span></span>
+    <span class="tape-item">Leadership<span class="tape-sep">✦</span></span>
+    <span class="tape-item">GoBeyond Podcast<span class="tape-sep">✦</span></span>
+    <span class="tape-item">Emerging Markets<span class="tape-sep">✦</span></span>
+    <span class="tape-item">MikeInc<span class="tape-sep">✦</span></span>
+    <span class="tape-item">Capital<span class="tape-sep">✦</span></span>
+    <span class="tape-item">Infrastructure<span class="tape-sep">✦</span></span>
+    <span class="tape-item">Faith<span class="tape-sep">✦</span></span>
+    <span class="tape-item">Leadership<span class="tape-sep">✦</span></span>
+    <span class="tape-item">GoBeyond Podcast<span class="tape-sep">✦</span></span>
+    <span class="tape-item">Emerging Markets<span class="tape-sep">✦</span></span>
+    <span class="tape-item">MikeInc<span class="tape-sep">✦</span></span>
+  </div>
+</div>
+
+<section class="pillars-section" id="content">
+  <div class="pillar-label reveal">What Mike INC Covers</div>
+  <h2 class="pillar-title reveal">4 Content<br>Pillars.</h2>
+  <p class="pillar-body reveal">Mike INC is the media and thought leadership engine behind Mike Ogbebor's public presence. Real perspectives on capital, infrastructure, faith, and leadership — built for builders.</p>
+  <div class="content-cards reveal">
+    <div class="content-card">
+      <span class="content-card-icon">⬡</span>
+      <div class="content-card-title">Capital & Infrastructure</div>
+      <div class="content-card-body">Cross-border investment strategy, real estate development, infrastructure economics, and emerging market capital deployment.</div>
+    </div>
+    <div class="content-card">
+      <span class="content-card-icon">◈</span>
+      <div class="content-card-title">Cross-Border Investment</div>
+      <div class="content-card-body">Nigeria, Ghana, Côte d'Ivoire, Dubai, GCC — on-the-ground perspectives on investing and building across sovereign markets.</div>
+    </div>
+    <div class="content-card">
+      <span class="content-card-icon">◎</span>
+      <div class="content-card-title">Leadership & Discipline</div>
+      <div class="content-card-body">Real talk on what it takes to build, lead, and stay disciplined across multiple ventures in a complex world.</div>
+    </div>
+    <div class="content-card">
+      <span class="content-card-icon">⬡</span>
+      <div class="content-card-title">Faith & Purpose</div>
+      <div class="content-card-body">Kingdom alignment, GoBeyond mindset, and the intersection of faith and business in everyday execution.</div>
+    </div>
+  </div>
+</section>
+
+<section class="fridays" id="podcast">
+  <div class="fridays-inner">
+    <div class="fridays-visual reveal" style="padding:0;overflow:hidden;position:relative;">
+      <img src="gobeyond-podcast.jpg" alt="Mike Ogbebor — GoBeyond Podcast" style="width:100%;height:420px;object-fit:cover;object-position:15% 15%;display:block;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(7,7,9,0.95));padding:32px 28px 24px;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.08em;color:var(--gold);margin-bottom:4px;">GoBeyond Podcast</div>
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,239,232,0.45);">Weekly · YouTube · Mike INC</div>
+      </div>
+      <div style="position:absolute;top:0;left:0;width:2px;height:40px;background:var(--gold);"></div>
+      <div style="position:absolute;top:0;left:0;width:40px;height:2px;background:var(--gold);"></div>
+    </div>
+    <div class="fridays-right reveal">
+      <div class="pillar-label">Signature Series</div>
+      <h2>GoBeyond<br>Fridays.</h2>
+      <p>Episodes on YouTube covering faith, motivation, finance, and real talk leadership. No fluff, no performance. Just perspective built to push you further — whenever you need it.</p>
+      <div class="topic-tags">
+        <div class="topic-tag">Faith</div>
+        <div class="topic-tag">Motivation</div>
+        <div class="topic-tag">Finance</div>
+        <div class="topic-tag">Leadership</div>
+        <div class="topic-tag">Real Talk</div>
+        <div class="topic-tag">Infrastructure</div>
+      </div>
+</div>
+  </div>
+</section>
+
+<section class="brands" id="brands">
+  <div class="brands-label reveal">The MikeInc Ecosystem</div>
+  <h2 class="brands-title reveal">Advisory & Institutional Work<br>Conducted Through</h2>
+  <div class="brands-grid reveal">
+    <a href="https://gobeyondadvisory.com" class="brand-card">
+      <div class="brand-card-name">GoBeyond Advisory</div>
+      <div class="brand-card-desc">Strategic investment and infrastructure advisory. The institutional engine.</div>
+      <div class="brand-card-link">gobeyondadvisory.com →</div>
+    </a>
+    <a href="https://eco-rails.com" class="brand-card">
+      <div class="brand-card-name">ECO Infrastructure</div>
+      <div class="brand-card-desc">Digital settlement and FX rails for Africa and emerging markets.</div>
+      <div class="brand-card-link">eco-rails.com →</div>
+    </a>
+    <a href="https://gobeyondseries.com" class="brand-card">
+      <div class="brand-card-name">The GoBeyond Series</div>
+      <div class="brand-card-desc">10-book series on faith, capital, discipline, and legacy.</div>
+      <div class="brand-card-link">gobeyondseries.com →</div>
+    </a>
+    <a href="https://globalkidneyfoundation.com" class="brand-card">
+      <div class="brand-card-name">Global Kidney Foundation</div>
+      <div class="brand-card-desc">501(c)(3) nonprofit — advocacy and support for kidney patients worldwide.</div>
+      <div class="brand-card-link">globalkidneyfoundation.com →</div>
+    </a>
+    <a href="https://mikeogbebor.com" class="brand-card">
+      <div class="brand-card-name">Mike Ogbebor</div>
+      <div class="brand-card-desc">Personal authority site. Author, advisor, infrastructure strategist.</div>
+      <div class="brand-card-link">mikeogbebor.com →</div>
+    </a>
+    <a href="#subscribe" class="brand-card">
+      <div class="brand-card-name">Mike INC Newsletter</div>
+      <div class="brand-card-desc">Weekly perspectives on capital, infrastructure, and the GoBeyond mindset.</div>
+      <div class="brand-card-link">Subscribe Below →</div>
+    </a>
+  </div>
+</section>
+
+<section class="subscribe" id="subscribe">
+  <div class="sub-kicker reveal">Stay In The Loop</div>
+  <h2 class="sub-title reveal">Go<br>Beyond.</h2>
+  <p class="sub-desc reveal">Weekly perspectives on capital, infrastructure, faith, and leadership. No noise. Just signal.</p>
+  <form action='/success' class='sub-form reveal' method='POST' name='subscribe'>
+    <input type="hidden" name="form-name" value="subscribe"/>
+    <p style="display:none"><label>Skip:<input name="bot-field"/></label></p>
+    <input type="email" name="email" class="sub-input" placeholder="your@email.com" required>
+    <button type="submit" class="sub-btn">Subscribe</button>
+  </form>
+  <div class="sub-note reveal">No spam. Unsubscribe anytime.</div>
+</section>
+
+<footer>
+  <div class="footer-logo">MIKE<span>INC</span></div>
+  <div class="footer-note">Houston · West Africa · Dubai</div>
+  <div class="footer-contact">
+    <a href="https://www.linkedin.com/in/mikeinc" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+    <a href="mailto:mikeinc80@gmail.com">mikeinc80@gmail.com</a>
+  </div>
+  <div class="footer-advisory">Advisory: <a href="https://gobeyondadvisory.com">GoBeyond Advisory</a></div>
+</footer>
+
+<script>
+try {
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => obs.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('visible'));
+  }
+} catch(e) {
+  try { document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible')); } catch(e2) {}
+}
+</script>
+</body>
+</html>
