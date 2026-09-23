@@ -17,7 +17,7 @@ jobs:
           cat phase2-restore/podcast-jpg/part-*.txt | tr -d '\n' | base64 -d > gobeyond-podcast.jpg
           file gobeyond-podcast.jpg || true
           test -s gobeyond-podcast.jpg
-          python3 -c "d=open('gobeyond-podcast.jpg','rb').read(3); assert d==b'\\xff\\xd8\\xff', d"
+          python3 -c 'd=open("gobeyond-podcast.jpg","rb").read(3); assert d==b"\xff\xd8\xff", d'
       - name: Commit asset
         run: |
           git config user.name "github-actions[bot]"
