@@ -1,0 +1,31 @@
+name: Assemble gobeyond-podcast.jpg
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/assemble-podcast-jpg.yml'
+      - 'phase2-restore/podcast-jpg/*.txt'
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode chunks to jpg
+        run: |
+          cat phase2-restore/podcast-jpg/part-*.txt | tr -d '\n' | base64 -d > gobeyond-podcast.jpg
+          file gobeyond-podcast.jpg || true
+          test -s gobeyond-podcast.jpg
+          python3 -c "d=open('gobeyond-podcast.jpg','rb').read(3); assert d==b'\\xff\\xd8\\xff', d"
+      - name: Commit asset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add gobeyond-podcast.jpg
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "assets: add gobeyond-podcast.jpg for podcast card"
+            git push
+          fi
