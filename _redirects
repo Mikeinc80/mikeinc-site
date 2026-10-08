@@ -1,0 +1,3 @@
+# Subscribe form posted to /success on the old build; serve the real success page there too.
+/success  /mikeinc-success.html  200
+/success.html  /mikeinc-success.html  200

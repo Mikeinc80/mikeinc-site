@@ -4,6 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mike INC | Business. Capital. Infrastructure. Perspective.</title>
+<meta name="description" content="Mike INC is Mike Ogbebor's media and thought leadership platform: perspectives on capital, infrastructure, cross-border investment, faith, and leadership, plus the GoBeyond Podcast.">
+<link rel="canonical" href="https://mikeinc.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Mike Ogbebor">
+<meta name="theme-color" content="#070709">
+<!-- SEARCH CONSOLE FALLBACK (URL-prefix property only). Preferred method is the DNS TXT record (Domain property).
+     If Mike chooses the meta-tag method instead, replace REPLACE_WITH_GOOGLE_SITE_VERIFICATION_TOKEN with the value
+     from Search Console and uncomment the next line. Do NOT publish with the placeholder uncommented.
+<meta name="google-site-verification" content="REPLACE_WITH_GOOGLE_SITE_VERIFICATION_TOKEN">
+-->
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mike INC">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://mikeinc.com/">
+<meta property="og:title" content="Mike INC | Business. Capital. Infrastructure. Perspective.">
+<meta property="og:description" content="Mike INC is Mike Ogbebor's media and thought leadership platform: perspectives on capital, infrastructure, cross-border investment, faith, and leadership, plus the GoBeyond Podcast.">
+<meta property="og:image" content="https://mikeinc.com/og-image.jpg">
+<meta property="og:image:secure_url" content="https://mikeinc.com/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mike Ogbebor next to the Mike INC wordmark: Business. Capital. Infrastructure. Perspective.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mike INC | Business. Capital. Infrastructure. Perspective.">
+<meta name="twitter:description" content="Mike INC is Mike Ogbebor's media and thought leadership platform: perspectives on capital, infrastructure, cross-border investment, faith, and leadership, plus the GoBeyond Podcast.">
+<meta name="twitter:image" content="https://mikeinc.com/og-image.jpg">
+<meta name="twitter:image:alt" content="Mike Ogbebor next to the Mike INC wordmark: Business. Capital. Infrastructure. Perspective.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -113,6 +147,11 @@ footer{padding:48px 56px;border-top:1px solid rgba(201,168,76,0.08);display:flex
 @keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.75s ease,transform 0.75s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
+/* SEO semantic wrappers: keep the original visual design */
+.hero-h1{display:contents;font:inherit;margin:0;font-weight:400;}
+.hero-h1 .hero-mega,.hero-h1 .hero-mega-gold{display:block;font-weight:400;}
+h3.content-card-title{font-weight:400;}
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 
 @media(max-width:900px){
   nav{padding:18px 24px;}
@@ -129,52 +168,56 @@ footer{padding:48px 56px;border-top:1px solid rgba(201,168,76,0.08);display:flex
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Mike INC",
-  "url": "https://mikeinc.com",
-  "description": "Media and thought leadership platform by Mike Ogbebor. Covering capital, infrastructure, cross-border investment, faith, and leadership.",
-  "publisher": {
-    "@type": "Person",
-    "name": "Mike Ogbebor",
-    "url": "https://mikeogbebor.com",
-    "jobTitle": "Founder & Managing Director, GoBeyond Advisory"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "PodcastSeries",
-  "name": "GoBeyond Podcast",
-  "description": "Weekly episodes by Mike Ogbebor on faith, motivation, finance, infrastructure, and real talk leadership.",
-  "author": {
-    "@type": "Person",
-    "name": "Mike Ogbebor",
-    "url": "https://mikeogbebor.com"
-  },
-  "inLanguage": "en",
-  "genre": ["Business", "Finance", "Faith", "Leadership", "Infrastructure"]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Mike Ogbebor",
-  "url": "https://mikeogbebor.com",
-  "jobTitle": "Founder & Managing Director",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "GoBeyond Advisory",
-    "url": "https://gobeyondadvisory.com"
-  },
-  "description": "Houston-based entrepreneur, author, and strategic advisor. Founder of GoBeyond Advisory and ECO Infrastructure.",
-  "sameAs": [
-    "https://gobeyondadvisory.com",
-    "https://eco-rails.com",
-    "https://gobeyondseries.com",
-    "https://globalkidneyfoundation.com",
-    "https://mikeinc.com"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://mikeinc.com/#website",
+      "name": "Mike INC",
+      "url": "https://mikeinc.com/",
+      "inLanguage": "en",
+      "description": "Media and thought leadership platform by Mike Ogbebor. Covering capital, infrastructure, cross-border investment, faith, and leadership.",
+      "publisher": {
+        "@id": "https://mikeinc.com/#mike-ogbebor"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://mikeinc.com/#mike-ogbebor",
+      "name": "Mike Ogbebor",
+      "url": "https://mikeogbebor.com",
+      "image": "https://mikeinc.com/gobeyond-podcast.jpg",
+      "description": "Author, advisor, and infrastructure strategist behind Mike INC. Advisory work is conducted through GoBeyond Advisory.",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "GoBeyond Advisory",
+        "url": "https://gobeyondadvisory.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/mikeinc",
+        "https://x.com/MikeInc__",
+        "https://www.tiktok.com/@mikeinc__",
+        "https://www.instagram.com/mikeinc__/"
+      ]
+    },
+    {
+      "@type": "PodcastSeries",
+      "@id": "https://mikeinc.com/#gobeyond-podcast",
+      "name": "GoBeyond Podcast",
+      "url": "https://mikeinc.com/#podcast",
+      "image": "https://mikeinc.com/gobeyond-podcast.jpg",
+      "description": "Weekly episodes by Mike Ogbebor on faith, motivation, finance, infrastructure, and real talk leadership.",
+      "author": {
+        "@id": "https://mikeinc.com/#mike-ogbebor"
+      },
+      "inLanguage": "en",
+      "genre": [
+        "Business",
+        "Finance",
+        "Faith",
+        "Leadership",
+        "Infrastructure"
+      ]
+    }
   ]
 }
 </script>
@@ -196,8 +239,7 @@ footer{padding:48px 56px;border-top:1px solid rgba(201,168,76,0.08);display:flex
   <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-kicker">Media · Content · Thought Leadership</div>
-    <div class="hero-mega">MIKE</div>
-    <div class="hero-mega-gold">INC.</div>
+    <h1 class="hero-h1"><span class="hero-mega">MIKE</span><span class="hero-mega-gold">INC.</span></h1>
     <div class="hero-bottom">
       <div class="hero-desc">"Business. Capital. Infrastructure. Perspective. Ideas that move people and systems forward."</div>
       <div class="hero-pillars">
@@ -235,23 +277,23 @@ footer{padding:48px 56px;border-top:1px solid rgba(201,168,76,0.08);display:flex
   <p class="pillar-body reveal">Mike INC is the media and thought leadership engine behind Mike Ogbebor's public presence. Real perspectives on capital, infrastructure, faith, and leadership — built for builders.</p>
   <div class="content-cards reveal">
     <div class="content-card">
-      <span class="content-card-icon">⬡</span>
-      <div class="content-card-title">Capital & Infrastructure</div>
+      <span class="content-card-icon" aria-hidden="true">⬡</span>
+      <h3 class="content-card-title">Capital & Infrastructure</h3>
       <div class="content-card-body">Cross-border investment strategy, real estate development, infrastructure economics, and emerging market capital deployment.</div>
     </div>
     <div class="content-card">
-      <span class="content-card-icon">◈</span>
-      <div class="content-card-title">Cross-Border Investment</div>
+      <span class="content-card-icon" aria-hidden="true">◈</span>
+      <h3 class="content-card-title">Cross-Border Investment</h3>
       <div class="content-card-body">Nigeria, Ghana, Côte d'Ivoire, Dubai, GCC — on-the-ground perspectives on investing and building across sovereign markets.</div>
     </div>
     <div class="content-card">
-      <span class="content-card-icon">◎</span>
-      <div class="content-card-title">Leadership & Discipline</div>
+      <span class="content-card-icon" aria-hidden="true">◎</span>
+      <h3 class="content-card-title">Leadership & Discipline</h3>
       <div class="content-card-body">Real talk on what it takes to build, lead, and stay disciplined across multiple ventures in a complex world.</div>
     </div>
     <div class="content-card">
-      <span class="content-card-icon">⬡</span>
-      <div class="content-card-title">Faith & Purpose</div>
+      <span class="content-card-icon" aria-hidden="true">⬡</span>
+      <h3 class="content-card-title">Faith & Purpose</h3>
       <div class="content-card-body">Kingdom alignment, GoBeyond mindset, and the intersection of faith and business in everyday execution.</div>
     </div>
   </div>
@@ -260,7 +302,7 @@ footer{padding:48px 56px;border-top:1px solid rgba(201,168,76,0.08);display:flex
 <section class="fridays" id="podcast">
   <div class="fridays-inner">
     <div class="fridays-visual reveal" style="padding:0;overflow:hidden;position:relative;">
-      <img src="gobeyond-podcast.jpg" alt="Mike Ogbebor — GoBeyond Podcast" style="width:100%;height:420px;object-fit:cover;object-position:15% 15%;display:block;">
+      <img src="gobeyond-podcast.jpg" alt="Mike Ogbebor at his desk, host of the GoBeyond Podcast" width="1320" height="929" style="width:100%;height:420px;object-fit:cover;object-position:15% 15%;display:block;">
       <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(7,7,9,0.95));padding:32px 28px 24px;">
         <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.08em;color:var(--gold);margin-bottom:4px;">GoBeyond Podcast</div>
         <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(242,239,232,0.45);">Weekly · YouTube · Mike INC</div>
@@ -325,10 +367,11 @@ footer{padding:48px 56px;border-top:1px solid rgba(201,168,76,0.08);display:flex
   <div class="sub-kicker reveal">Stay In The Loop</div>
   <h2 class="sub-title reveal">Go<br>Beyond.</h2>
   <p class="sub-desc reveal">Weekly perspectives on capital, infrastructure, faith, and leadership. No noise. Just signal.</p>
-  <form action='/success' class='sub-form reveal' method='POST' name='subscribe'>
+  <form action="/mikeinc-success.html" class="sub-form reveal" method="POST" name="subscribe" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="subscribe"/>
     <p style="display:none"><label>Skip:<input name="bot-field"/></label></p>
-    <input type="email" name="email" class="sub-input" placeholder="your@email.com" required>
+    <label for="subscribe-email" class="visually-hidden">Email address</label>
+    <input type="email" id="subscribe-email" name="email" class="sub-input" placeholder="your@email.com" autocomplete="email" required>
     <button type="submit" class="sub-btn">Subscribe</button>
   </form>
   <div class="sub-note reveal">No spam. Unsubscribe anytime.</div>
@@ -339,6 +382,9 @@ footer{padding:48px 56px;border-top:1px solid rgba(201,168,76,0.08);display:flex
   <div class="footer-note">Houston · West Africa · Dubai</div>
   <div class="footer-contact">
     <a href="https://www.linkedin.com/in/mikeinc" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+    <a href="https://x.com/MikeInc__" target="_blank" rel="noopener" aria-label="X">X</a>
+    <a href="https://www.tiktok.com/@mikeinc__" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+    <a href="https://www.instagram.com/mikeinc__/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
     <a href="mailto:mikeinc80@gmail.com">mikeinc80@gmail.com</a>
   </div>
   <div class="footer-advisory">Advisory: <a href="https://gobeyondadvisory.com">GoBeyond Advisory</a></div>
