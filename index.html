@@ -115,6 +115,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:20px 56px;display:fl
 .brand-card:hover{background:#141418;}
 .brand-card-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.08em;color:var(--text);margin-bottom:8px;}
 .brand-card-desc{font-size:13px;line-height:1.5;color:var(--text-dim);margin-bottom:14px;}
+.brand-card-cover{display:block;width:140px;height:auto;margin:0 auto 18px;}
 .brand-card-link{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
 
 /* SUBSCRIBE */
@@ -347,10 +348,10 @@ h3.content-card-title{font-weight:400;}
       <div class="brand-card-desc">Strategic investment and infrastructure advisory. The institutional engine.</div>
       <div class="brand-card-link">gobeyondadvisory.com →</div>
     </a>
-    <a href="https://eco-rails.com" class="brand-card">
-      <div class="brand-card-name">ECO Infrastructure</div>
+    <a href="https://ekorails.com" class="brand-card">
+      <div class="brand-card-name">EKO Infrastructure</div>
       <div class="brand-card-desc">Digital settlement and FX rails for Africa and emerging markets.</div>
-      <div class="brand-card-link">eco-rails.com →</div>
+      <div class="brand-card-link">ekorails.com →</div>
     </a>
     <a href="https://gobeyondseries.com" class="brand-card">
       <div class="brand-card-name">The GoBeyond Series</div>
@@ -372,6 +373,13 @@ h3.content-card-title{font-weight:400;}
       <div class="brand-card-desc">Weekly perspectives on capital, infrastructure, and the GoBeyond mindset.</div>
       <div class="brand-card-link">Subscribe Below →</div>
     </a>
+    <a href="https://mikeinc8.gumroad.com/l/qheaxr" class="brand-card" target="_blank" rel="noopener noreferrer">
+      <img class="brand-card-cover" src="/img/go-beyond-energy-cover.jpg" alt="Cover of Go Beyond Energy by MO" width="400" height="640" loading="lazy">
+      <div class="brand-card-link">Coming October 15, 2026</div>
+      <div class="brand-card-name">Go Beyond Energy</div>
+      <div class="brand-card-desc">Digital edition. By MO.</div>
+      <div class="brand-card-link">Coming Oct 15 &rarr;</div>
+    </a>
   </div>
 </section>
 
@@ -379,7 +387,7 @@ h3.content-card-title{font-weight:400;}
   <div class="sub-kicker reveal">Stay In The Loop</div>
   <h2 class="sub-title reveal">Go<br>Beyond.</h2>
   <p class="sub-desc reveal">Weekly perspectives on capital, infrastructure, faith, and leadership. No noise. Just signal.</p>
-  <form action="/mikeinc-success.html" class="sub-form reveal" method="POST" name="subscribe" data-netlify="true" netlify-honeypot="bot-field">
+  <form action='/mikeinc-success' class='sub-form reveal' method='POST' name='subscribe'>
     <input type="hidden" name="form-name" value="subscribe"/>
     <p style="display:none"><label>Skip:<input name="bot-field"/></label></p>
     <label for="subscribe-email" class="visually-hidden">Email address</label>
