@@ -109,6 +109,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:20px 56px;display:fl
 .yt-btn:hover{background:#D4B255;}
 
 /* BRANDS */
+.articles-section{padding:100px 56px;background:var(--bg);border-top:1px solid rgba(201,168,76,0.08);}
+.articles-cards{grid-template-columns:repeat(3,1fr);}
+a.content-card{display:block;text-decoration:none;color:inherit;}
+.articles-more{display:inline-block;margin-top:32px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;}
+.articles-more:hover{color:var(--gold-2);}
+section[id]{scroll-margin-top:80px;}
 .brands{padding:80px 56px;background:var(--bg-2);border-top:1px solid rgba(201,168,76,0.06);}
 .brands-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;text-align:center;}
 .brands-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,60px);letter-spacing:0.04em;margin-bottom:48px;text-align:center;line-height:1;}
@@ -165,9 +171,9 @@ h3.content-card-title{font-weight:400;}
   nav{padding:18px 24px;}
   .fridays-visual img{object-position:20% 12% !important;height:320px !important;}
   .nav-links{display:none;}
-  .hero-content,.pillars-section,.fridays,.brands,.subscribe,footer{padding-left:24px;padding-right:24px;}
+  .hero-content,.pillars-section,.articles-section,.fridays,.brands,.subscribe,footer{padding-left:24px;padding-right:24px;}
   .hero-bottom,.fridays-inner{grid-template-columns:1fr;gap:40px;}
-  .content-cards,.brands-grid{grid-template-columns:1fr;}
+  .content-cards,.articles-cards,.brands-grid{grid-template-columns:1fr;}
   .hero-mega,.hero-mega-gold{font-size:clamp(60px,18vw,130px);}
   footer{flex-direction:column;gap:16px;text-align:center;}
   .footer-contact{justify-content:center;}
@@ -276,6 +282,7 @@ h3.content-card-title{font-weight:400;}
   <ul class="nav-links">
     <li><a href="#content">Content</a></li>
     <li><a href="#podcast">GoBeyond Podcast</a></li>
+    <li><a href="#articles">Articles</a></li>
     <li><a href="#brands">Brands</a></li>
     <li><a href="#subscribe">Subscribe</a></li>
   </ul>
@@ -372,6 +379,18 @@ h3.content-card-title{font-weight:400;}
       <a href="https://www.youtube.com/@mikeinc." target="_blank" rel="noopener noreferrer" class="sub-btn" style="display:inline-block;margin-top:28px;text-decoration:none;">Watch on YouTube →</a>
 </div>
   </div>
+</section>
+
+<section class="articles-section" id="articles">
+  <div class="pillar-label reveal">Mike INC Writing</div>
+  <h2 class="pillar-title reveal">Weekly<br>Articles.</h2>
+  <div class="content-cards articles-cards reveal">
+    <a class="content-card" href="/one-account">
+      <h3 class="content-card-title">Find the One Account That Is Draining the Others</h3>
+      <div class="content-card-body">When several parts of your life feel low at once, the lowest number is rarely the place to start. Trace the drain back to its source and make one change that moves the rest.</div>
+    </a>
+  </div>
+  <a class="articles-more" href="https://www.gobeyondadvisory.com/briefs">All articles at GoBeyond Advisory →</a>
 </section>
 
 <section class="brands" id="brands">
