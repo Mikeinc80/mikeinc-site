@@ -186,37 +186,46 @@ h3.content-card-title{font-weight:400;}
 .mmark-img{height:64px;width:auto;max-width:100%;object-fit:contain;display:block;}
 @media(max-width:600px){.nav-logo-img{height:36px;}.mmark-img{height:auto;width:min(340px,80vw);}}
 
-/* YOUTUBE BANNERS */
-.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-.yt-hero{padding:120px 56px 56px;position:relative;background:radial-gradient(ellipse 70% 60% at 85% 0%,rgba(201,168,76,0.07) 0%,transparent 60%);}
-.yt-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px;}
-.yt-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-.yt-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,4vw,52px);letter-spacing:0.06em;line-height:1;}
-.yt-h span{color:var(--gold);}
-.yt-visit{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-border);padding:10px 18px;text-decoration:none;white-space:nowrap;transition:all .3s;}
-.yt-visit:hover{background:var(--gold-dim);border-color:var(--gold);}
-.yt-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
-.yt-card{display:block;text-decoration:none;color:var(--text);background:var(--bg-2);border:1px solid var(--gold-border);box-shadow:0 18px 40px rgba(0,0,0,.45);transition:transform .35s,border-color .35s,box-shadow .35s;}
-.yt-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 26px 50px rgba(0,0,0,.55);}
-.yt-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;}
-.yt-thumb img,.yf-media img{width:100%;height:100%;object-fit:cover;display:block;}
-.yt-tag{position:absolute;top:10px;left:10px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;background:rgba(7,7,9,.8);color:var(--gold);padding:4px 8px;border:1px solid var(--gold-border);}
-.yt-play{position:absolute;right:10px;bottom:10px;width:34px;height:34px;border-radius:50%;background:var(--gold);color:#070709;display:flex;align-items:center;justify-content:center;font-size:12px;padding-left:2px;}
-.yt-play.big{right:20px;bottom:20px;width:68px;height:68px;font-size:22px;}
-.yt-meta{padding:14px 16px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
-.yt-title{font-family:'Lora',serif;font-size:15px;line-height:1.35;}
-.yt-watch{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
-.yt-feature{margin:0 56px 64px;display:grid;grid-template-columns:1.3fr 1fr;border:1px solid var(--gold-border);background:linear-gradient(135deg,#0D0D11 0%,#101627 100%);}
-.yf-media{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;}
-.yf-copy{padding:40px;display:flex;flex-direction:column;justify-content:center;}
-.yf-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,64px);letter-spacing:.05em;line-height:1;color:var(--gold);margin-bottom:16px;}
-.yf-desc{font-family:'Lora',serif;font-style:italic;font-size:16px;line-height:1.6;color:var(--text-dim);margin-bottom:28px;}
-.yf-ctas{display:flex;gap:12px;flex-wrap:wrap;}
-.yf-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:12px 22px;background:var(--gold);color:#070709;border:1px solid var(--gold);transition:all .3s;}
-.yf-btn.ghost{background:transparent;color:#F2EFE8;border-color:var(--gold-border);}
-.yf-btn:hover{filter:brightness(1.1);border-color:var(--gold);}
-@media(max-width:1000px){.yt-row{grid-template-columns:repeat(2,minmax(0,1fr));}.yt-feature{grid-template-columns:1fr;}}
-@media(max-width:640px){.yt-hero{padding:100px 20px 40px;}.yt-head{flex-direction:column;align-items:flex-start;}.yt-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;gap:14px;margin:0 -20px;padding:0 20px 18px;}.yt-card{flex:0 0 78%;scroll-snap-align:start;}.yt-feature{margin:0 20px 48px;}.yf-copy{padding:28px 22px;}}
+/* POSTER SLIDER */
+.ps-hero{padding:110px 0 44px;position:relative;overflow:hidden;background:radial-gradient(ellipse 70% 60% at 85% 0%,rgba(201,168,76,0.07) 0%,transparent 60%);}
+.ps-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding:0 56px;margin-bottom:30px;}
+.ps-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.ps-h1{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(44px,6vw,84px);line-height:.9;letter-spacing:.05em;margin:0;}
+.ps-h1 span{color:var(--gold);}
+.ps-ctrls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.ps-toggle,.ps-visit{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);background:transparent;border:1px solid var(--gold-border);padding:10px 16px;text-decoration:none;cursor:pointer;white-space:nowrap;transition:all .3s;display:inline-flex;gap:8px;align-items:center;}
+.ps-toggle:hover,.ps-visit:hover,.ps-toggle:focus-visible,.ps-visit:focus-visible{background:var(--gold-dim);border-color:var(--gold);}
+.ps-ico{font-size:9px;letter-spacing:-1px;}
+.ps-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);}
+.ps-track{display:flex;gap:28px;width:max-content;list-style:none;margin:0;padding:10px 0 18px;animation:psroll 48s linear infinite;}
+.ps-hero:hover .ps-track,.ps-hero:focus-within .ps-track,.ps-hero.is-paused .ps-track{animation-play-state:paused;}
+@keyframes psroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 14px))}}
+.ps-item{flex:0 0 auto;}
+.ps-tile{display:block;width:clamp(260px,26vw,380px);padding:12px 12px 16px;background:#e9dcc0;background-image:radial-gradient(ellipse at center,#f1e6cc 0%,#d9c59c 100%);border:0;outline:3px double #C9A84C;outline-offset:-8px;box-shadow:0 0 0 1px #8a6d2f,0 22px 44px rgba(0,0,0,.55);cursor:pointer;text-align:left;color:#1b140a;transform:rotate(-.6deg);transition:transform .35s,box-shadow .35s;font:inherit;}
+.ps-item:nth-child(even) .ps-tile{transform:rotate(.7deg);}
+.ps-tile:hover,.ps-tile:focus-visible{transform:rotate(0) translateY(-6px);box-shadow:0 0 0 1px #C9A84C,0 30px 56px rgba(0,0,0,.65);}
+.ps-tile:focus-visible{outline-color:#fff;}
+.ps-frame{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;border:1px solid #6b5426;}
+.ps-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.45) contrast(1.08) saturate(.85) brightness(.95);transition:filter .4s;}
+.ps-tile:hover .ps-frame img,.ps-tile:focus-visible .ps-frame img{filter:sepia(.1) contrast(1.05);}
+.ps-frame::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at center,transparent 50%,rgba(30,18,4,.6) 100%);}
+.ps-frame::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.22;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+.ps-play{position:absolute;z-index:2;right:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:#C9A84C;color:#070709;display:flex;align-items:center;justify-content:center;font-size:14px;padding-left:3px;box-shadow:0 4px 12px rgba(0,0,0,.5);}
+.ps-cap{display:block;padding:14px 4px 0;text-align:center;}
+.ps-label{display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:#7a5c1e;margin-bottom:6px;}
+.ps-title{display:block;font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,2.2vw,32px);letter-spacing:.06em;line-height:1;color:#1b140a;}
+.ps-date{display:block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;color:#6b5426;margin-top:8px;}
+.ps-note{padding:6px 56px 0;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);}
+.ps-note span{color:var(--gold);}
+.ps-modal{position:fixed;inset:0;z-index:1000;background:rgba(4,4,6,.88);display:flex;align-items:center;justify-content:center;padding:20px;}
+.ps-modal[hidden]{display:none;}
+.ps-modal-in{position:relative;width:min(1100px,100%);}
+.ps-player{aspect-ratio:16/9;background:#000;border:1px solid var(--gold-border);}
+.ps-player iframe{width:100%;height:100%;border:0;display:block;}
+.ps-close{position:absolute;top:-46px;right:0;width:38px;height:38px;background:transparent;border:1px solid var(--gold-border);color:var(--gold);font-size:16px;cursor:pointer;}
+.ps-close:focus-visible,.ps-close:hover{border-color:var(--gold);background:var(--gold-dim);}
+@media(max-width:640px){.ps-hero{padding:96px 0 32px;}.ps-head{flex-direction:column;align-items:flex-start;padding:0 20px;}.ps-note{padding:6px 20px 0;}.ps-tile{width:76vw;}.ps-track{gap:18px;}}
+@media(prefers-reduced-motion:reduce){.ps-track{animation:none;}.ps-viewport{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-mask-image:none;mask-image:none;}.ps-track{padding-left:20px;padding-right:20px;}.ps-item{scroll-snap-align:start;}.ps-item.ps-clone{display:none;}.ps-toggle{display:none;}.ps-tile,.ps-item:nth-child(even) .ps-tile{transform:none;}}
 </style>
 
 <script type="application/ld+json">
@@ -349,20 +358,15 @@ h3.content-card-title{font-weight:400;}
   <a href="https://gobeyondadvisory.com" class="nav-sub">Advisory Work →</a>
 </nav>
 
-<section class="yt-hero" aria-label="Latest videos">
-  <h1 class="sr-only">MIKE INC. Media, Content and Thought Leadership</h1>
-  <div class="yt-head"><div><div class="yt-kicker">Latest from the channel</div><div class="yt-h">MIKE INC. <span>|</span> GoBeyond</div></div><a class="yt-visit" href="https://www.youtube.com/channel/UCO_VdxgqgGOrtzSUmTV9iBw" target="_blank" rel="noopener">Visit the channel &#8599;</a></div>
-  <div class="yt-row"><a class="yt-card" href="https://www.youtube.com/watch?v=4pjfDK89wfw" target="_blank" rel="noopener"><div class="yt-thumb"><img src="img/yt/4pjfDK89wfw.jpg" alt="Next Level" width="1280" height="720" loading="eager"><span class="yt-tag">Video</span><span class="yt-play" aria-hidden="true">&#9654;</span></div><div class="yt-meta"><div class="yt-title">Next Level</div><div class="yt-watch">Watch &#8599;</div></div></a><a class="yt-card" href="https://www.youtube.com/watch?v=XPyR2rMxJ3U" target="_blank" rel="noopener"><div class="yt-thumb"><img src="img/yt/XPyR2rMxJ3U.jpg" alt="Your Standard" width="1280" height="720" loading="eager"><span class="yt-tag">Video</span><span class="yt-play" aria-hidden="true">&#9654;</span></div><div class="yt-meta"><div class="yt-title">Your Standard</div><div class="yt-watch">Watch &#8599;</div></div></a><a class="yt-card" href="https://www.youtube.com/watch?v=9SQUVRO9X8c" target="_blank" rel="noopener"><div class="yt-thumb"><img src="img/yt/9SQUVRO9X8c.jpg" alt="Not Every Delay Is a Defeat" width="1280" height="720" loading="lazy"><span class="yt-tag">Video</span><span class="yt-play" aria-hidden="true">&#9654;</span></div><div class="yt-meta"><div class="yt-title">Not Every Delay Is a Defeat</div><div class="yt-watch">Watch &#8599;</div></div></a><a class="yt-card" href="https://www.youtube.com/watch?v=NbtO-QSpZ1c" target="_blank" rel="noopener"><div class="yt-thumb"><img src="img/yt/NbtO-QSpZ1c.jpg" alt="No Perfect Day" width="1280" height="720" loading="lazy"><span class="yt-tag">Short</span><span class="yt-play" aria-hidden="true">&#9654;</span></div><div class="yt-meta"><div class="yt-title">No Perfect Day</div><div class="yt-watch">Watch &#8599;</div></div></a></div>
-</section>
-<section class="yt-feature" aria-label="Featured video">
-  <a class="yf-media" href="https://www.youtube.com/watch?v=4pjfDK89wfw" target="_blank" rel="noopener"><img src="img/yt/4pjfDK89wfw.jpg" alt="Next Level" width="1280" height="720" loading="lazy"><span class="yt-play big" aria-hidden="true">&#9654;</span></a>
-  <div class="yf-copy">
-    <div class="yt-kicker">Newest release</div>
-    <div class="yf-title">Next Level</div>
-    <p class="yf-desc">Short, focused lessons on capital, leadership, discipline and faith. New videos and Shorts land on the channel regularly, alongside the GoBeyond Podcast.</p>
-    <div class="yf-ctas"><a class="yf-btn" href="https://www.youtube.com/watch?v=4pjfDK89wfw" target="_blank" rel="noopener">Watch now</a><a class="yf-btn ghost" href="https://www.youtube.com/channel/UCO_VdxgqgGOrtzSUmTV9iBw?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a></div>
+<section class="ps-hero" aria-labelledby="ps-h1">
+  <div class="ps-head">
+    <div><div class="ps-kicker">Media · Content · Thought Leadership</div><h1 id="ps-h1" class="ps-h1">MIKE <span>INC.</span></h1></div>
+    <div class="ps-ctrls"><button type="button" class="ps-toggle" aria-pressed="false" aria-label="Pause slider"><span class="ps-ico" aria-hidden="true">&#10074;&#10074;</span><span class="ps-tl">Pause</span></button><a class="ps-visit" href="https://www.youtube.com/channel/UCO_VdxgqgGOrtzSUmTV9iBw" target="_blank" rel="noopener">Visit the channel &#8599;</a></div>
   </div>
+  <div class="ps-viewport"><ul class="ps-track" role="list"><li class="ps-item"><button type="button" class="ps-tile" data-id="4pjfDK89wfw" aria-label="Play video: Next Level"><span class="ps-frame"><img src="/img/yt/4pjfDK89wfw.jpg" alt="" width="1280" height="720" loading="eager" fetchpriority="high" decoding="async"><span class="ps-play" aria-hidden="true">&#9654;</span></span><span class="ps-cap"><span class="ps-label">Now Showing</span><span class="ps-title">Next Level</span><span class="ps-date">NOV 1, 2026</span></span></button></li><li class="ps-item"><button type="button" class="ps-tile" data-id="XPyR2rMxJ3U" aria-label="Play video: Your Standard"><span class="ps-frame"><img src="/img/yt/XPyR2rMxJ3U.jpg" alt="" width="1280" height="720" loading="eager" fetchpriority="high" decoding="async"><span class="ps-play" aria-hidden="true">&#9654;</span></span><span class="ps-cap"><span class="ps-label">Now Showing</span><span class="ps-title">Your Standard</span><span class="ps-date">NOV 1, 2026</span></span></button></li><li class="ps-item"><button type="button" class="ps-tile" data-id="9SQUVRO9X8c" aria-label="Play video: Not Every Delay Is a Defeat"><span class="ps-frame"><img src="/img/yt/9SQUVRO9X8c.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"><span class="ps-play" aria-hidden="true">&#9654;</span></span><span class="ps-cap"><span class="ps-label">Now Showing</span><span class="ps-title">Not Every Delay Is a Defeat</span><span class="ps-date">OCT 30, 2026</span></span></button></li><li class="ps-item"><button type="button" class="ps-tile" data-id="aapCow0me5g" aria-label="Play video: Nobody Applauds the Foundation"><span class="ps-frame"><img src="/img/yt/aapCow0me5g.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"><span class="ps-play" aria-hidden="true">&#9654;</span></span><span class="ps-cap"><span class="ps-label">Now Showing</span><span class="ps-title">Nobody Applauds the Foundation</span><span class="ps-date">OCT 29, 2026</span></span></button></li></ul></div>
+  <div class="ps-note">Latest from MIKE INC. <span>|</span> GoBeyond on YouTube</div>
 </section>
+<div class="ps-modal" role="dialog" aria-modal="true" aria-label="Video player" hidden><div class="ps-modal-in"><button type="button" class="ps-close" aria-label="Close video">&#10005;</button><div class="ps-player"></div></div></div>
 
 <div class="tape">
   <div class="tape-track">
@@ -552,6 +556,38 @@ try {
 } catch(e) {
   try { document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible')); } catch(e2) {}
 }
+</script>
+<script>
+(function(){
+  var hero=document.querySelector('.ps-hero');if(!hero)return;
+  var track=hero.querySelector('.ps-track'),modal=document.querySelector('.ps-modal'),player=modal.querySelector('.ps-player'),closeBtn=modal.querySelector('.ps-close'),toggle=hero.querySelector('.ps-toggle'),lastFocus=null;
+  function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
+  function fmt(d){try{return new Date(d+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();}catch(e){return d;}}
+  function render(list){
+    var local=new Set(Array.prototype.map.call(track.querySelectorAll('.ps-tile'),function(b){return b.dataset.id;}));
+    track.innerHTML=list.map(function(v,i){var src=local.has(v.id)?'/img/yt/'+v.id+'.jpg':'https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg';
+      return '<li class="ps-item"><button type="button" class="ps-tile" data-id="'+esc(v.id)+'" aria-label="Play video: '+esc(v.title)+'"><span class="ps-frame"><img src="'+src+'" alt="" width="1280" height="720" loading="'+(i<2?'eager':'lazy')+'" decoding="async"><span class="ps-play" aria-hidden="true">&#9654;</span></span><span class="ps-cap"><span class="ps-label">Now Showing</span><span class="ps-title">'+esc(v.title)+'</span><span class="ps-date">'+fmt(v.published)+'</span></span></button></li>';}).join('');
+    loop();
+  }
+  function loop(){
+    Array.prototype.forEach.call(track.querySelectorAll('.ps-clone'),function(n){n.remove();});
+    var items=Array.prototype.slice.call(track.children),base=items.slice();
+    // ensure enough tiles to fill wide screens, then duplicate once for the seamless loop
+    while(track.children.length<8){base.forEach(function(n){var c=n.cloneNode(true);c.classList.add('ps-clone');c.setAttribute('aria-hidden','true');c.querySelector('button').tabIndex=-1;track.appendChild(c);});}
+    Array.prototype.slice.call(track.children).forEach(function(n){var c=n.cloneNode(true);c.classList.add('ps-clone');c.setAttribute('aria-hidden','true');c.querySelector('button').tabIndex=-1;track.appendChild(c);});
+  }
+  loop();
+  fetch('/.netlify/functions/yt-latest').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+  .then(function(d){if(d&&d.videos&&d.videos.length)return d;return fetch('/data/yt-videos.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});})
+  .then(function(d){if(d&&d.videos&&d.videos.length)render(d.videos);});
+  toggle.addEventListener('click',function(){var p=hero.classList.toggle('is-paused');toggle.setAttribute('aria-pressed',p);toggle.setAttribute('aria-label',p?'Play slider':'Pause slider');toggle.querySelector('.ps-tl').textContent=p?'Play':'Pause';toggle.querySelector('.ps-ico').innerHTML=p?'&#9654;':'&#10074;&#10074;';});
+  function open(id){lastFocus=document.activeElement;player.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&rel=0" title="YouTube video player" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';modal.hidden=false;document.body.style.overflow='hidden';closeBtn.focus();}
+  function close(){modal.hidden=true;player.innerHTML='';document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+  track.addEventListener('click',function(e){var b=e.target.closest('.ps-tile');if(b)open(b.dataset.id);});
+  closeBtn.addEventListener('click',close);
+  modal.addEventListener('click',function(e){if(e.target===modal)close();});
+  document.addEventListener('keydown',function(e){if(modal.hidden)return;if(e.key==='Escape')close();if(e.key==='Tab'){e.preventDefault();closeBtn.focus();}});
+})();
 </script>
 </body>
 </html>
