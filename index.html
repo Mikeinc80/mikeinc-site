@@ -179,6 +179,44 @@ h3.content-card-title{font-weight:400;}
   .footer-contact{justify-content:center;}
   .footer-social{justify-content:center;flex-basis:100%;}
 }
+.logo-plate{display:inline-flex;align-items:center;background:#FBF8F1;box-shadow:0 0 0 1px rgba(201,168,76,.35);border-radius:4px;padding:4px 10px;line-height:0;}
+.nav-logo-img{height:44px;width:auto;display:block;}
+.mmark-plate{display:flex;justify-content:center;max-width:100%;}
+.mmark-plate .logo-plate{padding:10px 16px;max-width:100%;}
+.mmark-img{height:64px;width:auto;max-width:100%;object-fit:contain;display:block;}
+@media(max-width:600px){.nav-logo-img{height:36px;}.mmark-img{height:auto;width:min(340px,80vw);}}
+
+/* YOUTUBE BANNERS */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.yt-hero{padding:120px 56px 56px;position:relative;background:radial-gradient(ellipse 70% 60% at 85% 0%,rgba(201,168,76,0.07) 0%,transparent 60%);}
+.yt-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px;}
+.yt-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.yt-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,4vw,52px);letter-spacing:0.06em;line-height:1;}
+.yt-h span{color:var(--gold);}
+.yt-visit{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-border);padding:10px 18px;text-decoration:none;white-space:nowrap;transition:all .3s;}
+.yt-visit:hover{background:var(--gold-dim);border-color:var(--gold);}
+.yt-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
+.yt-card{display:block;text-decoration:none;color:var(--text);background:var(--bg-2);border:1px solid var(--gold-border);box-shadow:0 18px 40px rgba(0,0,0,.45);transition:transform .35s,border-color .35s,box-shadow .35s;}
+.yt-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 26px 50px rgba(0,0,0,.55);}
+.yt-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;}
+.yt-thumb img,.yf-media img{width:100%;height:100%;object-fit:cover;display:block;}
+.yt-tag{position:absolute;top:10px;left:10px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;background:rgba(7,7,9,.8);color:var(--gold);padding:4px 8px;border:1px solid var(--gold-border);}
+.yt-play{position:absolute;right:10px;bottom:10px;width:34px;height:34px;border-radius:50%;background:var(--gold);color:#070709;display:flex;align-items:center;justify-content:center;font-size:12px;padding-left:2px;}
+.yt-play.big{right:20px;bottom:20px;width:68px;height:68px;font-size:22px;}
+.yt-meta{padding:14px 16px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.yt-title{font-family:'Lora',serif;font-size:15px;line-height:1.35;}
+.yt-watch{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+.yt-feature{margin:0 56px 64px;display:grid;grid-template-columns:1.3fr 1fr;border:1px solid var(--gold-border);background:linear-gradient(135deg,#0D0D11 0%,#101627 100%);}
+.yf-media{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;}
+.yf-copy{padding:40px;display:flex;flex-direction:column;justify-content:center;}
+.yf-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,64px);letter-spacing:.05em;line-height:1;color:var(--gold);margin-bottom:16px;}
+.yf-desc{font-family:'Lora',serif;font-style:italic;font-size:16px;line-height:1.6;color:var(--text-dim);margin-bottom:28px;}
+.yf-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.yf-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:12px 22px;background:var(--gold);color:#070709;border:1px solid var(--gold);transition:all .3s;}
+.yf-btn.ghost{background:transparent;color:#F2EFE8;border-color:var(--gold-border);}
+.yf-btn:hover{filter:brightness(1.1);border-color:var(--gold);}
+@media(max-width:1000px){.yt-row{grid-template-columns:repeat(2,minmax(0,1fr));}.yt-feature{grid-template-columns:1fr;}}
+@media(max-width:640px){.yt-hero{padding:100px 20px 40px;}.yt-head{flex-direction:column;align-items:flex-start;}.yt-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;gap:14px;margin:0 -20px;padding:0 20px 18px;}.yt-card{flex:0 0 78%;scroll-snap-align:start;}.yt-feature{margin:0 20px 48px;}.yf-copy{padding:28px 22px;}}
 </style>
 
 <script type="application/ld+json">
@@ -278,7 +316,7 @@ h3.content-card-title{font-weight:400;}
 {
  "@context": "https://schema.org",
  "@type": "Book",
- "name": "Go Beyond Energy",
+ "name": "GoBeyond Energy",
  "author": {
   "@type": "Person",
   "@id": "https://mikeinc.com/#mike-ogbebor",
@@ -300,7 +338,7 @@ h3.content-card-title{font-weight:400;}
 <body>
 
 <nav>
-  <div class="nav-logo">MIKE<span>INC</span></div>
+  <a class="nav-logo" href="/" aria-label="Mike Inc. home"><span class="logo-plate"><picture><source type="image/webp" srcset="/img/logos/mikeinc_logo@1x.webp 1x, /img/logos/mikeinc_logo@2x.webp 2x, /img/logos/mikeinc_logo@3x.webp 3x"><img class="nav-logo-img" src="/img/logos/mikeinc_logo@2x.png" srcset="/img/logos/mikeinc_logo@1x.png 1x, /img/logos/mikeinc_logo@2x.png 2x, /img/logos/mikeinc_logo@3x.png 3x" alt="Mike Inc." width="100" height="44"></picture></span></a>
   <ul class="nav-links">
     <li><a href="#content">Content</a></li>
     <li><a href="#podcast">GoBeyond Podcast</a></li>
@@ -311,20 +349,18 @@ h3.content-card-title{font-weight:400;}
   <a href="https://gobeyondadvisory.com" class="nav-sub">Advisory Work →</a>
 </nav>
 
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-kicker">Media · Content · Thought Leadership</div>
-    <h1 class="hero-h1"><span class="hero-mega">MIKE</span><span class="hero-mega-gold">INC.</span></h1>
-    <div class="hero-bottom">
-      <div class="hero-desc">"Business. Capital. Infrastructure. Perspective. Ideas that move people and systems forward."</div>
-      <div class="hero-pillars">
-        <div class="hero-pillar">Capital & Infrastructure</div>
-        <div class="hero-pillar">Cross-Border Investment</div>
-        <div class="hero-pillar">Leadership & Discipline</div>
-        <div class="hero-pillar">Faith & Purpose</div>
-      </div>
-    </div>
+<section class="yt-hero" aria-label="Latest videos">
+  <h1 class="sr-only">MIKE INC. Media, Content and Thought Leadership</h1>
+  <div class="yt-head"><div><div class="yt-kicker">Latest from the channel</div><div class="yt-h">MIKE INC. <span>|</span> GoBeyond</div></div><a class="yt-visit" href="https://www.youtube.com/channel/UCO_VdxgqgGOrtzSUmTV9iBw" target="_blank" rel="noopener">Visit the channel &#8599;</a></div>
+  <div class="yt-row"><a class="yt-card" href="https://www.youtube.com/watch?v=4pjfDK89wfw" target="_blank" rel="noopener"><div class="yt-thumb"><img src="img/yt/4pjfDK89wfw.jpg" alt="Next Level" width="1280" height="720" loading="eager"><span class="yt-tag">Video</span><span class="yt-play" aria-hidden="true">&#9654;</span></div><div class="yt-meta"><div class="yt-title">Next Level</div><div class="yt-watch">Watch &#8599;</div></div></a><a class="yt-card" href="https://www.youtube.com/watch?v=XPyR2rMxJ3U" target="_blank" rel="noopener"><div class="yt-thumb"><img src="img/yt/XPyR2rMxJ3U.jpg" alt="Your Standard" width="1280" height="720" loading="eager"><span class="yt-tag">Video</span><span class="yt-play" aria-hidden="true">&#9654;</span></div><div class="yt-meta"><div class="yt-title">Your Standard</div><div class="yt-watch">Watch &#8599;</div></div></a><a class="yt-card" href="https://www.youtube.com/watch?v=9SQUVRO9X8c" target="_blank" rel="noopener"><div class="yt-thumb"><img src="img/yt/9SQUVRO9X8c.jpg" alt="Not Every Delay Is a Defeat" width="1280" height="720" loading="lazy"><span class="yt-tag">Video</span><span class="yt-play" aria-hidden="true">&#9654;</span></div><div class="yt-meta"><div class="yt-title">Not Every Delay Is a Defeat</div><div class="yt-watch">Watch &#8599;</div></div></a><a class="yt-card" href="https://www.youtube.com/watch?v=NbtO-QSpZ1c" target="_blank" rel="noopener"><div class="yt-thumb"><img src="img/yt/NbtO-QSpZ1c.jpg" alt="No Perfect Day" width="1280" height="720" loading="lazy"><span class="yt-tag">Short</span><span class="yt-play" aria-hidden="true">&#9654;</span></div><div class="yt-meta"><div class="yt-title">No Perfect Day</div><div class="yt-watch">Watch &#8599;</div></div></a></div>
+</section>
+<section class="yt-feature" aria-label="Featured video">
+  <a class="yf-media" href="https://www.youtube.com/watch?v=4pjfDK89wfw" target="_blank" rel="noopener"><img src="img/yt/4pjfDK89wfw.jpg" alt="Next Level" width="1280" height="720" loading="lazy"><span class="yt-play big" aria-hidden="true">&#9654;</span></a>
+  <div class="yf-copy">
+    <div class="yt-kicker">Newest release</div>
+    <div class="yf-title">Next Level</div>
+    <p class="yf-desc">Short, focused lessons on capital, leadership, discipline and faith. New videos and Shorts land on the channel regularly, alongside the GoBeyond Podcast.</p>
+    <div class="yf-ctas"><a class="yf-btn" href="https://www.youtube.com/watch?v=4pjfDK89wfw" target="_blank" rel="noopener">Watch now</a><a class="yf-btn ghost" href="https://www.youtube.com/channel/UCO_VdxgqgGOrtzSUmTV9iBw?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a></div>
   </div>
 </section>
 
@@ -486,7 +522,7 @@ h3.content-card-title{font-weight:400;}
 </section>
 
 <footer>
-  <div class="footer-logo">MIKE<span>INC</span></div>
+  <div class="mmark-plate"><span class="logo-plate"><picture><source type="image/webp" srcset="/img/logos/mikeogbebor_m_mark@1x.webp 1x, /img/logos/mikeogbebor_m_mark@2x.webp 2x, /img/logos/mikeogbebor_m_mark@3x.webp 3x"><img class="mmark-img" src="/img/logos/mikeogbebor_m_mark@2x.png" srcset="/img/logos/mikeogbebor_m_mark@1x.png 1x, /img/logos/mikeogbebor_m_mark@2x.png 2x, /img/logos/mikeogbebor_m_mark@3x.png 3x" alt="Mike Ogbebor M mark" width="362" height="64" loading="lazy"></picture></span></div>
   <div class="footer-note">Houston · West Africa · Dubai</div>
   <div class="footer-contact">
     <span class="footer-social">
